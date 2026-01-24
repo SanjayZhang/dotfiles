@@ -1,0 +1,56 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew uninstall:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)",
+      "Bash(git rebase:*)",
+      "Bash(git cherry-pick:*)",
+      "Bash(git tag:*)",
+      "Bash(git remote:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm test:*)",
+      "Bash(npm ci:*)",
+      "Bash(yarn install:*)",
+      "Bash(yarn run:*)",
+      "Bash(yarn test:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm run:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(pytest:*)",
+      "Bash(cargo build:*)",
+      "Bash(cargo run:*)",
+      "Bash(cargo test:*)",
+      "Bash(go build:*)",
+      "Bash(go run:*)",
+      "Bash(go test:*)",
+      "Bash(make:*)"
+    ],
+    "deny": [
+      "Bash(git commit --amend:*)",
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)"
+    ],
+    "defaultMode": "plan"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "/Users/zhangshengjie/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  }
+}
