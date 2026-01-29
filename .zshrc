@@ -83,13 +83,17 @@ alias mc="cd ~/mark && claude"
 alias mi="cd ~/mark/mark-ios-app && claude"
 alias mp="cd ~/mark/sanjay-dev-mark-pi && claude"
 alias mm="cd ~/mark/mark-marketing-web && claude"
-alias deploy-v3="cd ~/mark/sanjay-dev-mark-pi && ./scripts/deploy.sh --run --version v3 --watch"
+alias deploy-v3="cd ~/mark/sanjay-dev-mark-pi && ./scripts/deploy.sh --run --version v3 --watch --watch-recordings"
 alias deploy-ios="cd ~/mark/mark-ios-app && pkill -9 Xcode; pkill -9 xcodebuild; \rm -rf ~/Library/Developer/Xcode/DerivedData && cd /Users/zhangshengjie/mark/mark-ios-app && flutter clean && \rm -rf ios/Pods ios/Podfile.lock && flutter pub get && cd ios && pod install --repo-update && cd .. && flutter run -d 00008110-000C70E21EC1401E"
 alias triggerscan='f=/tmp/trigger1_$(date +%Y%m%d_%H%M%S).jpg && cp ~/trigger1.jpg "$f" && cd /Users/zhangshengjie/mark/sanjay-dev-mark-pi && ./scripts/trigger_scan.sh "$f"'
+alias triggeraudio='f=/tmp/trigger_audio_$(date +%Y%m%d_%H%M%S).mp3 && cp /tmp/stt-test-audio/test_english_audio.mp3 "$f" && cd /Users/zhangshengjie/mark/sanjay-dev-mark-pi && ./scripts/trigger_record.sh "$f"'
 alias mark-stop="bash ~/mark/scripts/close-all.sh"
 alias mark-restart="bash ~/mark/scripts/restart-all.sh"
 alias eq="python3 /Users/zhangshengjie/english-helper/quiz.py"
+alias es="/Users/zhangshengjie/english-helper/sync.sh"
 alias sz="source ~/.zshrc"
+alias me="cd ~/english-helper && claude"
+alias sync-quiz='QUIZ_SERVER_URL=http://182.92.212.52 QUIZ_API_KEY=d8b92f8215cec750c2ea9d01a0b243d5330ee5d87b76a984a343eab0debafd4b python3 /Users/zhangshengjie/english-helper/sync_remote.py'
 
 # Kill process by port number
 killport() { lsof -ti:$1 | xargs kill -9; }

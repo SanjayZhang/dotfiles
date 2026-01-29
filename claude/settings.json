@@ -1,5 +1,9 @@
 {
   "permissions": {
+    "additionalDirectories": [
+      "~/mark/",
+      "/tmp/"
+    ],
     "allow": [
       "Bash(brew uninstall:*)",
       "Bash(git status:*)",

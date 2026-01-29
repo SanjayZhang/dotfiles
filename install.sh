@@ -25,5 +25,6 @@ mkdir -p "$HOME/.claude"
 backup_and_link "$DOTFILES_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 backup_and_link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
 backup_and_link "$DOTFILES_DIR/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
+backup_and_link "$DOTFILES_DIR/claude/settings.local.json" "$HOME/.claude/settings.local.json"
 
 echo "Dotfiles installed!"

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(chmod:*)",
+      "Bash(./update.sh)",
+      "WebFetch(domain:www.personpsy.org)",
+      "Bash(curl:*)",
+      "Bash(git:*)",
+      "Bash(git checkout:*)",
+      "WebSearch",
+      "Bash(files-to-prompt:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(python3:*)",
+      "Bash(pkill:*)",
+      "Bash(flutter:*)",
+      "Bash(xargs:*)",
+      "Bash(gh:*)"
+    ]
+  }
+}
