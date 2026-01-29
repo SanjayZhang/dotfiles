@@ -86,7 +86,7 @@ alias mm="cd ~/mark/mark-marketing-web && claude"
 alias deploy-v3="cd ~/mark/sanjay-dev-mark-pi && ./scripts/deploy.sh --run --version v3 --watch --watch-recordings"
 alias deploy-ios="cd ~/mark/mark-ios-app && pkill -9 Xcode; pkill -9 xcodebuild; \rm -rf ~/Library/Developer/Xcode/DerivedData && cd /Users/zhangshengjie/mark/mark-ios-app && flutter clean && \rm -rf ios/Pods ios/Podfile.lock && flutter pub get && cd ios && pod install --repo-update && cd .. && flutter run -d 00008110-000C70E21EC1401E"
 alias triggerscan='f=/tmp/trigger1_$(date +%Y%m%d_%H%M%S).jpg && cp ~/trigger1.jpg "$f" && cd /Users/zhangshengjie/mark/sanjay-dev-mark-pi && ./scripts/trigger_scan.sh "$f"'
-alias triggeraudio='f=/tmp/trigger_audio_$(date +%Y%m%d_%H%M%S).mp3 && cp /tmp/stt-test-audio/test_english_audio.mp3 "$f" && cd /Users/zhangshengjie/mark/sanjay-dev-mark-pi && ./scripts/trigger_record.sh "$f"'
+alias triggeraudio='f=/tmp/trigger_audio_$(date +%Y%m%d_%H%M%S).opus && cp /tmp/stt-test-audio/test_english_audio.opus "$f" && cd /Users/zhangshengjie/mark/sanjay-dev-mark-pi && ./scripts/trigger_record.sh "$f"'
 alias mark-stop="bash ~/mark/scripts/close-all.sh"
 alias mark-restart="bash ~/mark/scripts/restart-all.sh"
 alias eq="python3 /Users/zhangshengjie/english-helper/quiz.py"
@@ -139,3 +139,16 @@ flutter-reset() {
 
 # Amp CLI
 export PATH="/Users/zhangshengjie/.amp/bin:$PATH"
+
+# Sync dotfiles and claude skills to GitHub
+sync-dotfiles() {
+    # Sync dotfiles repo
+    "$HOME/dotfiles/update.sh"
+
+    # Sync skills repo
+    cd "$HOME/.claude/skills" && \
+        git add -A && \
+        git commit -m "Update skills" && \
+        git push
+    cd - > /dev/null
+}

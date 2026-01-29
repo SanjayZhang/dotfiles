@@ -15,7 +15,10 @@
       "Bash(pkill:*)",
       "Bash(flutter:*)",
       "Bash(xargs:*)",
-      "Bash(gh:*)"
+      "Bash(gh:*)",
+      "Bash(cat:*)",
+      "Bash(source:*)",
+      "Bash(sync-dotfiles)"
     ]
   }
 }
